@@ -1,0 +1,19 @@
+{
+  "type": "module",
+  "name": "cc_wc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_OPTIONS='--no-warnings=ExperimentalWarning --loader ts-node/esm' npx ts-node --esm index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tslib": "^2.6.3"
+  }
+}
