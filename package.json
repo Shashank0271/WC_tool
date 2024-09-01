@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "name": "cc_wc",
   "version": "1.0.0",
   "main": "index.js",
@@ -11,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
   "devDependencies": {
     "@types/node": "^22.0.0",
     "tslib": "^2.6.3"

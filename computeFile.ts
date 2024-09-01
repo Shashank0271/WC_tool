@@ -1,16 +1,21 @@
-import fs, { FileHandle } from "node:fs/promises";
+import fs from "node:fs/promises";
 
 export class ComputeFile {
   filePath: string;
-  fileContentBuffer: Buffer = Buffer.alloc(0);
+  fileContentBuffer: Buffer;
   fileContent: string = "";
 
-  constructor(filePath: string) {
-    this.filePath = filePath;
+  constructor(filePath?: string, fileContentBuffer?: Buffer) {
+    this.filePath = filePath ? filePath : "";
+    this.fileContentBuffer = fileContentBuffer
+      ? fileContentBuffer
+      : Buffer.alloc(0);
   }
 
   async readFileContent() {
-    this.fileContentBuffer = await fs.readFile(this.filePath);
+    if (this.fileContentBuffer.byteLength == 0) {
+      this.fileContentBuffer = await fs.readFile(this.filePath);
+    }
     this.fileContent = this.fileContentBuffer.toString("utf-8");
   }
 

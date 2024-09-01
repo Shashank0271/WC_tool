@@ -1,6 +1,6 @@
 export interface Command {
   commandType: CommandType;
-  filePath: string;
+  filePath?: string;
 }
 
 export enum CommandType {
