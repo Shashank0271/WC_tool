@@ -9,3 +9,8 @@ This is a basic implementation of the UNIX command line tool wc.
 - `npx ts-node ccwc -l filename` (displays the number of lines in the file)
 - `npx ts-node ccwc -w filename` (displays the number of words in the file)
 - `npx ts-node ccwc -m filename` (displays the number of characters in the file)
+
+
+### Also supports taking input from stdin
+
+- `cat test.txt | npx tsc-node ccwc`
